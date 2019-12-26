@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function back() {
+            window.history.back();
+            window.event.returnValue=false;
+        }
+    </script>
+</head>
+<body>
+<div align="center" style="position:relative;top:50px">
+    <p>提交材料</p>
+
+</div>
+<form name="material" action="/hand" class="text-info">
+    <div class="text" style="position:relative;top:50px;right:25px" align="center">
+        工业APP名称：<input type="text" placeholder="请输入工业APP名称" name="name" id="name" style="width:150px;height:30px;">
+    </div>
+    <div class="text" style="position:relative;top:70px" align="center">
+        分类1：<input type="text" placeholder="请输入分类1" name="class1" id="class1" style="width:150px;height:30px;">
+    </div>
+    <div class="text" style="position:relative;top:90px" align="center">
+        分类2：<input type="text" placeholder="请输入分类2" name="class2" id="class2" style="width:150px;height:30px;">
+    </div>
+    <div class="text" style="position:relative;top:110px" align="center">
+        分类3：<input type="text" placeholder="请输入分类3" name="class3" id="class3" style="width:150px;height:30px;">
+    </div>
+    <div class="text" style="position:relative;top:130px" align="center">
+        等级1：<input type="text" placeholder="请输入等级1" name="level1" id="level1" style="width:150px;height:30px;">
+    </div>
+    <div class="text" style="position:relative;top:150px" align="center">
+        等级2：<input type="text" placeholder="请输入等级2" name="level2" id="level2" style="width:150px;height:30px;">
+    </div>
+    <div class="text" style="position:relative;top:170px" align="center">
+        等级3：<input type="text" placeholder="请输入等级3" name="level3" id="level3" style="width:150px;height:30px;">
+    </div>
+    <div align="center" style="position:relative;top:190px">
+        <button  style="width:100px;height:50px">提交</button>
+        <button onclick="back()" style="width:100px;height:50px">取消</button>
+
+    </div>
+</form>
+</body>
+</html>

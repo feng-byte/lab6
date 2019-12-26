@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function back() {
+            window.history.back();
+            window.event.returnValue=false;
+        }
+    </script>
+</head>
+<body>
+<div align="center" style="position:relative;top:50px">
+    <p>查看结果</p>
+
+</div>
+<form name="result" action="/result" class="text-info">
+<div align="center">
+    <table style="position:relative;border: 1px solid;top:100px">
+        <tr>
+            <th>APP名称</th>
+            <th>分类1</th>
+            <th>分类2</th>
+            <th>分类3</th>
+            <th>等级1</th>
+            <th>等级2</th>
+            <th>等级3</th>
+        </tr>
+        <tr th:each="user:${appList}">
+            <td th:text="${user.name}"></td>
+            <td th:text="${user.class_1}"></td>
+            <td th:text="${user.class_2}"></td>
+            <td th:text="${user.class_3}"></td>
+            <td th:text="${user.level_1}"></td>
+            <td th:text="${user.level_2}"></td>
+            <td th:text="${user.level_3}"></td>
+        </tr>
+    </table>
+</div>
+    <div align="center" style="position:relative;top:190px">
+
+        <button onclick="back()" style="width:100px;height:50px">返回</button>
+
+    </div>
+</form>
+</body>
+</html>

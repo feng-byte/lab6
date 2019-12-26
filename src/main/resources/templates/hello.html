@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+
+        function check()
+        {
+            var content=document.getElementById("username").value;//input的id
+            //alert(content);
+
+            for(var i=0;i<"${userList}".length;i++)
+            {
+
+            }
+
+            if(content=="123") {
+                //alert(content.value);
+                //if(checkId(id)==false)
+                //{
+                //   alert()
+                //}
+                //alert("sdd");
+                window.location.href="http://localhost:8080";
+                window.event.returnValue=false;
+            }
+            else
+            {
+                alert("用户名或密码错误!");
+            }
+
+
+        }
+
+        function register() {
+                   alert("不支持注册！") ;
+            window.location.href="http://localhost:8080/hello";
+            window.event.returnValue=false;
+        }
+
+        function back() {
+            window.location.href="http://localhost:8080";
+            window.event.returnValue=false;
+        }
+
+    </script>
+
+
+</head>
+<body>
+
+<div align="center" style="position:relative;top:50px">
+    <p>企业登录</p>
+</div>
+
+<!-- <p class="lead" th:text="${greeting}">(greeting)</p>-->
+
+<form name="login" action="/check" class="text-info">
+    <div class="text" style="position:relative;top:50px" align="center">
+        用户名：<input type="text" placeholder="请输入用户名" name="username" id="username" style="width:150px;height:30px;">
+    </div>
+    <div class="text" style="position:relative;top:70px;left:7px" align="center">
+        密码：<input type="text" placeholder="请输入密码" name="password" id="password" style="width:150px;height:30px;">
+    </div>
+    <div align="center" style="position:relative;top:90px">
+        <button  style="width:100px;height:50px;">登录</button>
+        <button onclick="register()" style="width:100px;height:50px;">注册</button>
+        <button onclick="back()" style="width:100px;height:50px;">退出</button>
+    </div>
+</form>
+
+
+    <!--<div align="center" style="position:relative;top:90px">
+        <button onclick="register()" style="width:100px;height:50px;">注册</button>
+        <button onclick="back()" style="width:100px;height:50px;">退出</button>
+    </div>-->
+
+
+<!--<div align="center">
+    <table style="position:relative;border: 1px solid;top:100px">
+        <tr>
+            <th>ID</th>
+            <th>姓名</th>
+            <th>密码</th>
+        </tr>
+        <tr th:each="user:${userList}">
+            <td th:text="${user.id}"></td>
+            <td th:text="${user.name}"></td>
+            <td th:text="${user.password}"></td>
+        </tr>
+    </table>
+</div>-->
+
+
+</body>
+</html>
